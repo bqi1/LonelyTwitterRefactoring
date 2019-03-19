@@ -1,4 +1,4 @@
-package ca.ualberta.cs.lonelytwitter;
+package ca.ualberta.cs.lonelytwitterCHANGED;
 
 import java.util.Date;
 import java.util.List;
@@ -40,7 +40,7 @@ public class LonelyTwitterActivity extends Activity {
 		oldTweetsList.setAdapter(adapter);
 	}
 
-	public void save(View v) {
+	public void saveFile(View v) {
 		String text = bodyText.getText().toString();
 
 		NormalLonelyTweet tweet;
@@ -54,7 +54,7 @@ public class LonelyTwitterActivity extends Activity {
 			adapter.notifyDataSetChanged();
 
 			bodyText.setText("");
-			tweetsProvider.saveTweets(tweets);
+			tweetsProvider.saveTweetsChanged(tweets);
 		} else {
 			Toast.makeText(this, "Invalid tweet", Toast.LENGTH_SHORT).show();
 		}
@@ -63,7 +63,7 @@ public class LonelyTwitterActivity extends Activity {
 	public void clear(View v) {
 		tweets.clear();
 		adapter.notifyDataSetChanged();
-		tweetsProvider.saveTweets(tweets);
+		tweetsProvider.saveTweetsChanged(tweets);
 	}
 
 }

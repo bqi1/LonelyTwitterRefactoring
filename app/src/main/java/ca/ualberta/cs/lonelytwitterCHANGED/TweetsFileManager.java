@@ -1,4 +1,4 @@
-package ca.ualberta.cs.lonelytwitter;
+package ca.ualberta.cs.lonelytwitterCHANGED;
 
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
@@ -47,7 +47,7 @@ public class TweetsFileManager {
 		return tweets;
 	}
 
-	public void saveTweets(List<NormalLonelyTweet> tweets) {
+	public void saveTweetsChanged(List<NormalLonelyTweet> tweets) {
 		try {
 			FileOutputStream fos = ctx.openFileOutput("file.sav", 0);
 			ObjectOutputStream oos = new ObjectOutputStream(fos);
